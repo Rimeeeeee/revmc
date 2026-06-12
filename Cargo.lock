@@ -3026,10 +3026,10 @@ dependencies = [
  "revm-context-interface",
  "revm-database",
  "revm-database-interface",
- "revm-handler 41.0.0 (git+https://github.com/Rimeeeeee/revm?branch=eip-8268)",
- "revm-inspector 41.0.0 (git+https://github.com/Rimeeeeee/revm?branch=eip-8268)",
+ "revm-handler",
+ "revm-inspector",
  "revm-interpreter",
- "revm-precompile 41.0.0 (git+https://github.com/Rimeeeeee/revm?branch=eip-8268)",
+ "revm-precompile",
  "revm-primitives",
  "revm-state",
 ]
@@ -3108,25 +3108,6 @@ dependencies = [
 [[package]]
 name = "revm-handler"
 version = "41.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f5e043ebfc0899c435e44475796285898e4f822e637bd67856da79cc170bd9df"
-dependencies = [
- "auto_impl",
- "derive-where",
- "revm-bytecode",
- "revm-context",
- "revm-context-interface",
- "revm-database-interface",
- "revm-interpreter",
- "revm-precompile 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-primitives",
- "revm-state",
- "serde",
-]
-
-[[package]]
-name = "revm-handler"
-version = "41.0.0"
 source = "git+https://github.com/Rimeeeeee/revm?branch=eip-8268#5697dcfd9f6183a970820e83bbd6993b9f85fd94"
 dependencies = [
  "auto_impl",
@@ -3136,42 +3117,27 @@ dependencies = [
  "revm-context-interface",
  "revm-database-interface",
  "revm-interpreter",
- "revm-precompile 41.0.0 (git+https://github.com/Rimeeeeee/revm?branch=eip-8268)",
+ "revm-precompile",
  "revm-primitives",
  "revm-state",
+ "serde",
 ]
 
 [[package]]
 name = "revm-inspector"
 version = "41.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2e470b2a5e177918944d8cd26174455b61b8fbfbbe7fe411d28b4097e410d11e"
+source = "git+https://github.com/Rimeeeeee/revm?branch=eip-8268#5697dcfd9f6183a970820e83bbd6993b9f85fd94"
 dependencies = [
  "auto_impl",
  "either",
  "revm-context",
  "revm-database-interface",
- "revm-handler 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "revm-handler",
  "revm-interpreter",
  "revm-primitives",
  "revm-state",
  "serde",
  "serde_json",
-]
-
-[[package]]
-name = "revm-inspector"
-version = "41.0.0"
-source = "git+https://github.com/Rimeeeeee/revm?branch=eip-8268#5697dcfd9f6183a970820e83bbd6993b9f85fd94"
-dependencies = [
- "auto_impl",
- "either",
- "revm-context",
- "revm-database-interface",
- "revm-handler 41.0.0 (git+https://github.com/Rimeeeeee/revm?branch=eip-8268)",
- "revm-interpreter",
- "revm-primitives",
- "revm-state",
 ]
 
 [[package]]
@@ -3189,8 +3155,7 @@ dependencies = [
 [[package]]
 name = "revm-precompile"
 version = "41.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6d785931e4b8750cf9d79c808c22f05979c8d191baafc8badd4651db82584c1c"
+source = "git+https://github.com/Rimeeeeee/revm?branch=eip-8268#5697dcfd9f6183a970820e83bbd6993b9f85fd94"
 dependencies = [
  "ark-bls12-381",
  "ark-bn254",
@@ -3207,27 +3172,6 @@ dependencies = [
  "revm-primitives",
  "ripemd",
  "secp256k1",
- "sha2",
-]
-
-[[package]]
-name = "revm-precompile"
-version = "41.0.0"
-source = "git+https://github.com/Rimeeeeee/revm?branch=eip-8268#5697dcfd9f6183a970820e83bbd6993b9f85fd94"
-dependencies = [
- "ark-bls12-381",
- "ark-bn254",
- "ark-ec",
- "ark-ff 0.5.0",
- "ark-serialize 0.5.0",
- "arrayref",
- "aurora-engine-modexp",
- "cfg-if",
- "k256",
- "p256",
- "revm-context-interface",
- "revm-primitives",
- "ripemd",
  "sha2",
 ]
 
@@ -3257,8 +3201,7 @@ dependencies = [
 [[package]]
 name = "revm-statetest-types"
 version = "41.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d9ced634104a9857185f02a7a3a5dd4a503590fababafbb295ad213df6dbf302"
+source = "git+https://github.com/Rimeeeeee/revm?branch=eip-8268#5697dcfd9f6183a970820e83bbd6993b9f85fd94"
 dependencies = [
  "alloy-eip7928 0.4.3",
  "k256",
@@ -3278,8 +3221,8 @@ version = "0.1.0"
 dependencies = [
  "revm-bytecode",
  "revm-context-interface",
- "revm-handler 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-inspector 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "revm-handler",
+ "revm-inspector",
  "revm-interpreter",
  "revm-primitives",
  "revmc-backend",
@@ -3334,7 +3277,7 @@ dependencies = [
  "revm-context-interface",
  "revm-database",
  "revm-database-interface",
- "revm-handler 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "revm-handler",
  "revm-interpreter",
  "revm-primitives",
  "revm-state",
@@ -3374,8 +3317,8 @@ dependencies = [
  "revm-context",
  "revm-context-interface",
  "revm-database-interface",
- "revm-handler 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-inspector 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "revm-handler",
+ "revm-inspector",
  "revm-interpreter",
  "revm-primitives",
  "revm-state",
@@ -3400,8 +3343,8 @@ version = "0.1.0"
 dependencies = [
  "revm-context",
  "revm-context-interface",
- "revm-handler 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-inspector 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "revm-handler",
+ "revm-inspector",
  "revm-interpreter",
  "revm-primitives",
  "revm-state",
@@ -3427,7 +3370,7 @@ dependencies = [
  "revm-context",
  "revm-database",
  "revm-database-interface",
- "revm-handler 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "revm-handler",
  "revm-primitives",
  "revm-state",
  "revmc",
@@ -3479,8 +3422,8 @@ dependencies = [
  "revm-context-interface",
  "revm-database",
  "revm-database-interface",
- "revm-handler 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-inspector 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "revm-handler",
+ "revm-inspector",
  "revm-interpreter",
  "revm-primitives",
  "revm-state",
@@ -3515,8 +3458,8 @@ dependencies = [
  "revm-context-interface",
  "revm-database",
  "revm-database-interface",
- "revm-handler 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-inspector 41.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "revm-handler",
+ "revm-inspector",
  "revm-interpreter",
  "revm-primitives",
  "revm-state",
