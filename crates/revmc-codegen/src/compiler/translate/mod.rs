@@ -2109,13 +2109,15 @@ mod pf {
 
     pub(super) struct GasTracker {
         /// The initial gas limit.
-        pub(super) limit: u64,
+        pub(super) gas_limit: u64,
         /// The remaining gas.
         pub(super) remaining: u64,
         /// State gas reservoir (EIP-8037).
         pub(super) reservoir: u64,
-        /// Total state gas spent.
-        pub(super) state_gas_spent: u64,
+        /// Net state gas spent.
+        pub(super) state_gas_spent: i64,
+        /// State gas drawn from regular gas after the reservoir is exhausted.
+        pub(super) state_gas_spilled: u64,
         /// Refunded gas.
         pub(super) refunded: i64,
     }
