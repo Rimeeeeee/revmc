@@ -385,6 +385,13 @@ tests! {
             expected_stack: STACK_WHAT_INTERPRETER_SAYS,
             expected_gas: GAS_WHAT_INTERPRETER_SAYS,
         }),
+        swap16_dup10_selfdestruct_underflow(@raw {
+            bytecode: &[op::SWAP16, op::DUP10, op::SELFDESTRUCT],
+            spec_id: SpecId::OSAKA,
+            expected_return: InstructionResult::StackUnderflow,
+            expected_stack: STACK_WHAT_INTERPRETER_SAYS,
+            expected_gas: GAS_WHAT_INTERPRETER_SAYS,
+        }),
 
         // Invalid immediate: 0x5B (91) is in the invalid range [91, 127] for decode_single.
         dupn_invalid_imm(@raw {
@@ -1275,6 +1282,14 @@ tests! {
                 }]);
             }),
         }),
+        log3_topic_does_not_resize_memory(@raw {
+            bytecode: &[
+                op::PUSH2, 0x08, 0x00, op::PUSH0, op::PUSH0, op::PUSH0, op::PUSH0, op::LOG3,
+                op::PUSH0, op::PUSH0, op::MSTORE,
+            ],
+            expected_memory: MEMORY_WHAT_INTERPRETER_SAYS,
+            expected_gas: GAS_WHAT_INTERPRETER_SAYS,
+        }),
         create(@raw {
             bytecode: &[op::PUSH1, 0x69, op::PUSH0, op::MSTORE, op::PUSH1, 32, op::PUSH0, op::PUSH1, 0x42, op::CREATE],
             expected_return: InstructionResult::Stop,
@@ -1416,6 +1431,13 @@ tests! {
             assert_host: Some(|host| {
                 assert_eq!(host.selfdestructs, [(DEF_ADDR, Address::with_last_byte(0x69))]);
             }),
+        }),
+        selfdestruct_preserves_remaining_stack(@raw {
+            bytecode: &[op::NUMBER, op::NUMBER, op::SELFDESTRUCT],
+            spec_id: SpecId::BERLIN,
+            expected_return: InstructionResult::SelfDestruct,
+            expected_stack: STACK_WHAT_INTERPRETER_SAYS,
+            expected_gas: GAS_WHAT_INTERPRETER_SAYS,
         }),
         // Static-context SELFDESTRUCT: gas < 5000 → OOG before static-call check.
         selfdestruct_static_oog(@raw {
