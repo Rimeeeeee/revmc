@@ -116,7 +116,6 @@ const DYNAMIC_WITH_BASE_GAS: &[u8] = &[
     op::DELEGATECALL,
     op::STATICCALL,
     op::SELFDESTRUCT,
-    op::TXDIFF,
     op::EVENTDATACOPY,
 ];
 
@@ -157,7 +156,6 @@ const SPEC_GATED_OPCODES: &[(u8, SpecId)] = &[
     (op::SIGPARAM, SpecId::BOGOTA),
     (op::SIGDATACOPY, SpecId::BOGOTA),
     (op::TXTRACE, SpecId::BOGOTA),
-    (op::TXDIFF, SpecId::BOGOTA),
     (op::EVENTDATACOPY, SpecId::BOGOTA),
 ];
 
@@ -252,13 +250,11 @@ mod tests {
             op::SIGPARAM,
             op::SIGDATACOPY,
             op::TXTRACE,
-            op::TXDIFF,
             op::EVENTDATACOPY,
         ] {
             assert!(before[opcode as usize].is_disabled());
             assert!(!active[opcode as usize].is_disabled());
         }
-        assert!(active[op::TXDIFF as usize].is_dynamic());
         assert!(active[op::EVENTDATACOPY as usize].is_dynamic());
     }
 

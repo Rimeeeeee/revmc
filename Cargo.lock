@@ -58,7 +58,7 @@ dependencies = [
 [[package]]
 name = "alloy-consensus"
 version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#12fdaee23d0b644c476bf5e56e5c1632927b2e6b"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=bogota-devnet-2#6a58ac1b6a758b1620b74a932c660062e4e2612f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -129,7 +129,7 @@ dependencies = [
 [[package]]
 name = "alloy-eip8141"
 version = "0.1.1"
-source = "git+https://github.com/Soubhik-10/eips?branch=frames-all-eips#921ddebb486507d74808239b51e180e7600196d1"
+source = "git+https://github.com/Rimeeeeee/eips?branch=bogota-devnet-2#7aa4a3a765b70798c3f945362d573d6371e74efa"
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
@@ -141,7 +141,7 @@ dependencies = [
 [[package]]
 name = "alloy-eips"
 version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#12fdaee23d0b644c476bf5e56e5c1632927b2e6b"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=bogota-devnet-2#6a58ac1b6a758b1620b74a932c660062e4e2612f"
 dependencies = [
  "alloy-eip2124",
  "alloy-eip2930",
@@ -164,7 +164,7 @@ dependencies = [
 [[package]]
 name = "alloy-evm"
 version = "0.39.0"
-source = "git+https://github.com/Soubhik-10/evm?branch=frames-all-eips#5c35db18a87dd6122b7d1c0ab690d275fe13fa3a"
+source = "git+https://github.com/Rimeeeeee/evm?branch=bogota-devnet-2#34d34646ccf65011a19bd4af2f1ee7f322178d5d"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -245,7 +245,7 @@ dependencies = [
 [[package]]
 name = "alloy-serde"
 version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#12fdaee23d0b644c476bf5e56e5c1632927b2e6b"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=bogota-devnet-2#6a58ac1b6a758b1620b74a932c660062e4e2612f"
 dependencies = [
  "alloy-primitives",
  "serde",
@@ -329,7 +329,7 @@ dependencies = [
 [[package]]
 name = "alloy-tx-macros"
 version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#12fdaee23d0b644c476bf5e56e5c1632927b2e6b"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=bogota-devnet-2#6a58ac1b6a758b1620b74a932c660062e4e2612f"
 dependencies = [
  "darling 0.23.0",
  "proc-macro2",
@@ -3199,7 +3199,7 @@ checksum = "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4"
 [[package]]
 name = "revm"
 version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "revm-bytecode",
  "revm-context",
@@ -3217,7 +3217,7 @@ dependencies = [
 [[package]]
 name = "revm-bytecode"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "bitvec",
  "paste",
@@ -3229,7 +3229,7 @@ dependencies = [
 [[package]]
 name = "revm-context"
 version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "alloy-eip8141",
  "bitvec",
@@ -3246,7 +3246,7 @@ dependencies = [
 [[package]]
 name = "revm-context-interface"
 version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "alloy-eip2930",
  "alloy-eip7702",
@@ -3262,7 +3262,7 @@ dependencies = [
 [[package]]
 name = "revm-database"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "alloy-eips",
  "derive_more",
@@ -3277,7 +3277,7 @@ dependencies = [
 [[package]]
 name = "revm-database-interface"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "auto_impl",
  "either",
@@ -3290,7 +3290,7 @@ dependencies = [
 [[package]]
 name = "revm-handler"
 version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "alloy-eip8141",
  "auto_impl",
@@ -3309,7 +3309,7 @@ dependencies = [
 [[package]]
 name = "revm-inspector"
 version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "auto_impl",
  "either",
@@ -3326,7 +3326,7 @@ dependencies = [
 [[package]]
 name = "revm-interpreter"
 version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "revm-bytecode",
  "revm-context-interface",
@@ -3338,7 +3338,7 @@ dependencies = [
 [[package]]
 name = "revm-precompile"
 version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "ark-bls12-381",
  "ark-bn254",
@@ -3361,7 +3361,7 @@ dependencies = [
 [[package]]
 name = "revm-primitives"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "alloy-primitives",
  "once_cell",
@@ -3371,7 +3371,7 @@ dependencies = [
 [[package]]
 name = "revm-state"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "alloy-eip7928",
  "bitflags 2.13.2",
@@ -3384,7 +3384,7 @@ dependencies = [
 [[package]]
 name = "revm-statetest-types"
 version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Rimeeeeee/revm?branch=bogota-devnet-2#9dcc332cb5a476a954b1379f2234d42c5cceb0f1"
 dependencies = [
  "alloy-eip7928",
  "k256",
