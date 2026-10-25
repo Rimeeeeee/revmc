@@ -120,10 +120,11 @@ const DYNAMIC_WITH_BASE_GAS: &[u8] = &[
 ];
 
 /// Opcodes whose gas cost is entirely dynamic — computed fully in builtins at runtime.
-const FULLY_DYNAMIC: &[u8] = &[op::SSTORE, op::CREATE, op::CREATE2];
+const FULLY_DYNAMIC: &[u8] = &[op::SSTORE, op::CREATE, op::CREATE2, op::SETCODEFROM];
 
 /// Opcodes that are gated behind a specific `SpecId`, paired with the spec they were introduced in.
 const SPEC_GATED_OPCODES: &[(u8, SpecId)] = &[
+    (op::SETCODEFROM, SpecId::BOGOTA),
     (op::SHL, SpecId::PETERSBURG),
     (op::SHR, SpecId::PETERSBURG),
     (op::SAR, SpecId::PETERSBURG),
@@ -348,6 +349,11 @@ mod tests {
         assert!(!amsterdam[op::SWAPN as usize].is_disabled());
         assert!(!amsterdam[op::EXCHANGE as usize].is_disabled());
         assert!(!amsterdam[op::SLOTNUM as usize].is_disabled());
+        assert!(amsterdam[op::SETCODEFROM as usize].is_disabled());
+        let bogota = op_info_map(SpecId::BOGOTA);
+        assert!(!bogota[op::SETCODEFROM as usize].is_disabled());
+        assert!(bogota[op::SETCODEFROM as usize].is_dynamic());
+        assert_eq!(bogota[op::SETCODEFROM as usize].base_gas(), 0);
 
         // Spec-gated: PUSH0 disabled before Shanghai.
         let pre_shanghai = op_info_map(SpecId::MERGE);

@@ -16,7 +16,7 @@ const BYTECODE_RET42: &[u8] = &[0x60, 0x42, 0x5f, 0x52, 0x60, 0x20, 0x5f, 0xf3];
 fn bogota_uses_interpreter_for_async_blocking_and_explicit_compilation() {
     for blocking in [false, true] {
         let tb = TestBackend::new(RuntimeConfig { enabled: true, blocking, ..Default::default() });
-        for code in [BYTECODE_RET42, &[0xb6][..], &[0xb7][..], &[0xb8][..]] {
+        for code in [BYTECODE_RET42, &[0xa7][..], &[0xb6][..], &[0xb7][..], &[0xb8][..]] {
             let req = TestBackend::req(code, SpecId::BOGOTA);
             assert!(matches!(
                 tb.lookup(req.clone()),
